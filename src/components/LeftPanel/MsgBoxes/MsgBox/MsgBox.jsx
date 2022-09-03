@@ -3,7 +3,7 @@ import s from './MsgBox.module.css'
 
 const MsgBox = () => {
   return (
-    <div>MsgBox</div>
+    <div>Message Box</div>
   )
 }
 
