@@ -1,8 +1,11 @@
 import './App.css';
+import LeftPanel from './components/LeftPanel/LeftPanel';
+import RightPanel from './components/RightPanel/RightPanel';
 
 const App = () => (
   <div className="App">
-    <p>WhatsApp</p>
+    <LeftPanel />    
+    <RightPanel />    
   </div>
 )
 
