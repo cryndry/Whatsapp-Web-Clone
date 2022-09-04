@@ -1,0 +1,7 @@
+.Footer {
+    height: 52px;
+    padding: 5px 17px 5px 10px;
+    display: flex;
+    align-items: center;
+    order: 3;
+}

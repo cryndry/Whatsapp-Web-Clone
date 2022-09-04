@@ -9,7 +9,7 @@ const LeftHeader = () => {
   return (
     <div className={s.LeftHeader}>
       <div className={s.PpContainer}>
-        <img className={s.ProfilePhoto} src={PP} alt="Profile Photo" />
+        <img className={s.ProfilePhoto} src={PP} alt="ProfilePhoto" />
       </div>
       <div className={s.Buttons}>
         <StatusButton />

@@ -3,7 +3,7 @@ import s from './MsgScreen.module.css'
 
 const MsgScreen = () => {
   return (
-    <div>MsgScreen</div>
+    <div className={s.MsgScreen}>MsgScreen</div>
   )
 }
 
