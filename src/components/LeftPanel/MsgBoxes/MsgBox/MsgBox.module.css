@@ -1,0 +1,72 @@
+.MessageBox {
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.MessageBoxActive {
+    background-color: var(--BackgroundActive);
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.BoxPhotoContainer {
+    height: 72px;
+    padding-left: 15px;
+    padding-right: 13px;
+}
+
+.BoxPhoto {
+    margin-top: -1px;
+    padding: 12px 0;
+    height: 49px;
+    width: 49px;
+    border-radius: 50%;
+}
+
+.BoxInfo {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    flex-grow: 1;
+    color: var(--Secondary);
+}
+
+.BoxInfoName {
+    display: flex;
+}
+
+
+.MessageBoxName {
+    color: var(--PrimaryStrong);
+    text-align: left;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    font-size: 17px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.BoxLastMsgTime {
+    margin-top: 3px;
+    margin-left: 6px;
+    overflow: hidden;
+    line-height: 14px;
+    flex: none;
+    align-self: flex-end;
+    max-width: 100%;
+    font-size: 12px;
+}
+
+.BoxLastMsg {
+    margin-top: 2px;
+}
+
+.LastMsg {
+    color: var(--Secondary);
+}
+
+.LastMsgActive {
+    color: var(--Primary);
+}
