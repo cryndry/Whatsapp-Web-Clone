@@ -3,3 +3,15 @@
     height: 100%;
     overflow: hidden;
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .LeftPanel {
+        flex-basis: 35%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .LeftPanel {
+        flex-basis: 40%;
+    }
+}

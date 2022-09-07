@@ -44,8 +44,16 @@
     overflow: hidden;
     overflow-wrap: break-word;
     font-size: 17px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     flex-grow: 1;
+}
+
+.MessageBoxNameText {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .BoxLastMsgTime {
@@ -61,12 +69,44 @@
 
 .BoxLastMsg {
     margin-top: 2px;
+    line-height: 20px;
+    max-height: 20px;
 }
 
-.LastMsg {
+.OtherIcons {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 6px;
+    line-height: 18px;
+}
+.OtherIcons > svg {
+    margin-right: 5px;
+}
+.OtherIcons > svg:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.LastMsgBox {
+    display: flex;
+    align-items: flex-start;
     color: var(--Secondary);
 }
 
-.LastMsgActive {
+.LastMsgBoxActive {
+    display: flex;
+    align-items: flex-start;
     color: var(--Primary);
+}
+
+.LastMsg {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    flex-grow: 1;
+}
+
+.LastMsgText {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

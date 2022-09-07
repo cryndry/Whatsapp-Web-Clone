@@ -12,7 +12,9 @@ const SearchBox = () => {
                     <div className={s.SearchBoxIcon}>
                         <SearchBoxIcon />
                     </div>
+                    <div className={s.SearchBoxText}>
                         Search or start new chat
+                    </div>
                 </div>
             </div>
             <div className={s.UnreadIcon}>

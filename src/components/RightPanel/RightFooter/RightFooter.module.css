@@ -1,7 +1,88 @@
 .Footer {
-    height: 52px;
+    min-height: 52px;
+    max-height: 132px;
     padding: 5px 17px 5px 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: row;
     order: 3;
+    background-color: var(--Header);
+}
+
+.LeftButtons {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.LeftButtons>svg:nth-child(1) {
+    margin-right: 8px;
+}
+
+.LeftButtons>svg:nth-child(2) {
+    padding: 8px;
+}
+
+.TextingContainer {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    min-height: 52px;
+    max-height: 132px;
+}
+
+.TypingContainer {
+    display: flex;
+    flex-grow: 1;
+
+    padding: 9px 12px 11px 12px;
+    margin: 5px 10px;
+    background-color: var(--BackgroundActive);
+    border: 1px solid var(--BackgroundActive);
+    border-radius: 8px;
+    min-width: 0;
+    min-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+
+.Typing {
+    position: relative;
+    flex-grow: 1;
+    left: 4px;
+    line-height: 20px;
+    max-height: 100px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: text;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    overflow-wrap: break-word;
+    /* 
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    */
+}
+
+.Typing[contenteditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    font-size: 0.9375rem;
+    color: var(--Secondary);
+}
+
+.MicButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 37px;
+    min-height: 42px;
+    padding: 5px 0;
 }

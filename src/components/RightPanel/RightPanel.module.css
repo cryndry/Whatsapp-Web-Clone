@@ -2,4 +2,18 @@
     flex-basis: 70%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-height: 100%;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .RightPanel {
+        flex-basis: 65%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .RightPanel {
+        flex-basis: 60%;
+    }
 }

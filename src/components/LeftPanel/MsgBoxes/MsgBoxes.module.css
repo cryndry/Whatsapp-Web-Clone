@@ -4,5 +4,25 @@
     flex-grow: 1;
     overflow-y: auto;
     position: relative;
-    height:100vh;
+    height: calc(100vh - 113px);
+    width: 100%;
+}
+
+.EndingTextContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 16px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(134, 150, 160, 0.15);
+}
+
+.EndingText {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.EndingText>span {
+    color: #53bdeb;
 }

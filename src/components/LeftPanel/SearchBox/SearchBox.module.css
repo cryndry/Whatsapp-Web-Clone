@@ -17,8 +17,18 @@
     padding-right: 32px;
     padding-left: 65px;
     border-radius: 8px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    flex-grow: 1;
     align-items: center;
+    color: var(--Secondary);
+}
+
+.SearchBoxText {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .SearchBoxIcon {

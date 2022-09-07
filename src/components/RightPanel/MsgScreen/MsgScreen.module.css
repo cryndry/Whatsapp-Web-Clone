@@ -1,4 +1,13 @@
-.MsgScreen {
+.MsgScreenContainer {
     order: 2;
     flex-grow: 1;
+    position: relative;
+    height: calc(70% - 122px); /* height sıkıntılı */
+}
+
+.MsgScreen {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
