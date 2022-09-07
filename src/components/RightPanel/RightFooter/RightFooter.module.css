@@ -67,8 +67,8 @@
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     overflow-wrap: break-word;
-    white-space: wrap;
-    word-break: break-all;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .Typing[contenteditable][placeholder]:empty:before {
