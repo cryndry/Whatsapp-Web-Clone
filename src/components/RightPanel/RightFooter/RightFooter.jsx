@@ -14,12 +14,14 @@ const RightFooter = () => {
             </div>
             <div className={s.TextingContainer}>
                 <div className={s.TypingContainer}>
-                    <div className={s.Typing} contentEditable="true" placeholder='Type a message' onInput={MsgInput}
-                        onPaste={(e) => {
-                            e.preventDefault();
-                            let text = (e.originalEvent || e).clipboardData.getData('text/plain');
-                            document.execCommand("insertHTML", false, text);
-                        }}>
+                    <div className={s.TypingGrid}>
+                        <div className={s.Typing} contentEditable="true" placeholder='Type a message' onInput={MsgInput}
+                            onPaste={(e) => {
+                                e.preventDefault();
+                                let text = (e.originalEvent || e).clipboardData.getData('text/plain');
+                                document.execCommand("insertHTML", false, text);
+                            }}>
+                        </div>
                     </div>
                 </div>
                 <div className={s.MicButton}>

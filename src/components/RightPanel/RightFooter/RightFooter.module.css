@@ -45,7 +45,12 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
+}
 
+.TypingGrid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    flex-grow: 1;
 }
 
 .Typing {
@@ -62,13 +67,8 @@
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     overflow-wrap: break-word;
-    /* 
+    white-space: wrap;
     word-break: break-all;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    overflow-y: auto;
-    overflow-x: hidden; 
-    */
 }
 
 .Typing[contenteditable][placeholder]:empty:before {
