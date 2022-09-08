@@ -2,6 +2,7 @@
     height: 72px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .MessageBoxActive {
@@ -9,6 +10,7 @@
     height: 72px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .BoxPhotoContainer {

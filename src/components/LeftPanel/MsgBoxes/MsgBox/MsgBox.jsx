@@ -9,7 +9,7 @@ const MsgBox = () => {
   const [isBoxActive, setIsBoxActive] = useState(false)
   const [isBoxHovered, setIsBoxHovered] = useState(false)
   return (
-    <div className={isBoxActive ? s.MessageBoxActive : s.MessageBox} onClick={(e) => { setIsBoxActive(() => true) }} onMouseOver={() => { setIsBoxHovered(() => true) }} onMouseOut={() => { setIsBoxHovered(() => false) }}>
+    <div className={isBoxActive ? s.MessageBoxActive : s.MessageBox} onClick={(e) => { setIsBoxActive(() => !isBoxActive) }} onMouseOver={() => { setIsBoxHovered(() => true) }} onMouseOut={() => { setIsBoxHovered(() => false) }}>
       <div className={s.BoxPhotoContainer}>
         <img className={s.BoxPhoto} src={PP} alt="" />
       </div>

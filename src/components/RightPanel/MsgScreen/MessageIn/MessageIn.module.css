@@ -1,0 +1,45 @@
+.MessageLine {
+    padding: 0 7%;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.MessageContainer {
+    background-color: var(--MessageIn);
+    border-radius: 7.5px;
+    border-top-left-radius: 0;
+    max-width: 85%;
+    font-size: 14.2px;
+    line-height: 19px;
+    display: flex;
+    position: relative;
+}
+
+.MessageTail {
+    position: absolute;
+    z-index: 100;
+    width: 8px;
+    left: -8px;
+    top: 0;
+    height: 13px;
+    color: var(--MessageIn);
+}
+
+.MessageBody {
+    padding: 6px 7px 8px 9px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.MessageText {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
