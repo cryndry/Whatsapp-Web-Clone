@@ -4,12 +4,19 @@ import PP from "../../assets/PP.jpg"
 import PinIcon from "../../assets/PinIcon"
 import MuteIcon from "../../assets/MuteIcon"
 import ContextButton from "../../assets/ContextButton"
+import { useSelector } from "react-redux"
 
-const MsgBox = () => {
-  const [isBoxActive, setIsBoxActive] = useState(false)
+const MsgBox = (props) => {
+  const isBoxActive = useSelector(state => state.MsgBoxes[props.id])
   const [isBoxHovered, setIsBoxHovered] = useState(false)
+
+
   return (
-    <div className={isBoxActive ? s.MessageBoxActive : s.MessageBox} onClick={(e) => { setIsBoxActive(() => !isBoxActive) }} onMouseOver={() => { setIsBoxHovered(() => true) }} onMouseOut={() => { setIsBoxHovered(() => false) }}>
+    <div className={isBoxActive ? s.MessageBoxActive : s.MessageBox}
+      onClick={(e) => { props.activator(props.id); }}
+      onMouseOver={() => { setIsBoxHovered(() => true) }}
+      onMouseOut={() => { setIsBoxHovered(() => false) }}
+    >
       <div className={s.BoxPhotoContainer}>
         <img className={s.BoxPhoto} src={PP} alt="" />
       </div>
