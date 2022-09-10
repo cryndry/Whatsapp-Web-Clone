@@ -7,6 +7,23 @@
     border-left: 1px solid rgba(233, 237, 239, 0.12);
 }
 
+.NoActiveChat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100vh;
+    background-color: var(--Header);
+}
+
+.IntroTitle {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-size: 32px;
+    font-weight: 300;
+}
+
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
     .RightPanel {
         flex-basis: 65%;

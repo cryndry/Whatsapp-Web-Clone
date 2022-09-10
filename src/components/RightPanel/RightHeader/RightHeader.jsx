@@ -3,8 +3,12 @@ import s from "./RightHeader.module.css"
 import PP from "../assets/PP.jpg"
 import MenuButton from "../assets/MenuButton"
 import SearchButton from "../assets/SearchButton"
+import { useSelector } from "react-redux"
 
 const RightHeader = () => {
+  const activeBox = useSelector(state => state.MsgBoxes.activeNow)
+  const boxName = useSelector(state => state.MsgBoxes[activeBox]?.boxName)
+  const members = useSelector(state => state.MsgBoxes[activeBox]?.members)
   return (
     <div className={s.RightHeader}>
       <div className={s.PpContainer}>
@@ -12,10 +16,10 @@ const RightHeader = () => {
       </div>
       <div className={s.BoxInfo}>
         <div className={s.MessageBoxName}>
-          Ondördüncü harbiye koğuşu
+          {boxName}
         </div>
         <div className={s.CurrentInfo}>
-          Ahmet, Azad, Enes, Furkan, Hamarat, Taha, Yusuf, Sen
+          {members.join(", ")+", You"}
         </div>
       </div>
       <div className={s.Buttons}>

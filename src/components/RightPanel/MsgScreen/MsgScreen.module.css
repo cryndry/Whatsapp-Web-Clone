@@ -1,9 +1,11 @@
 .MsgScreenContainer {
     order: 2;
-    flex-grow: 1;
     position: relative;
-    height: calc(100vh - 122px);
+    flex-grow: 1;
+    height: 1px;
+    /*height height'ın olabileciği maksimum degerden küçük olarak ayarlanırsa flex grow height'ı otomatikleştiriyor.*/
     width: 100%;
+    /* height: calc(100vh - 202px); */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -13,4 +15,6 @@
 .MsgScreen {
     display: flex;
     flex-direction: column;
+    margin-top: auto;
+    padding-top: 12px;
 }

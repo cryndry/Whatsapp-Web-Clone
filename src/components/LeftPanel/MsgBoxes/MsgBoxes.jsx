@@ -12,23 +12,18 @@ const MsgBoxes = () => {
 
     const chatActivate = (num) => {
         if (num === activeChat) {
-            dispatch(MsgBoxesActions.activator({ [num]: false }))
+            dispatch(MsgBoxesActions.activator({ activeNow: "" }))
             setActiveChat("-1")
         } else {
-            setActiveChat(prevState => {
-                if (prevState === "-1") {
-                    dispatch(MsgBoxesActions.activator({ [num]: true }))
-                } else {
-                    dispatch(MsgBoxesActions.activator({ [num]: true, [prevState]: false }))
-                }
-                return num
-            })
+            dispatch(MsgBoxesActions.activator({ activeNow: num }))
+            setActiveChat(num)
         }
     }
-    console.log(comps);
+
     return (
         <div className={s.MsgBoxes}>
-            {Object.keys(comps).map(num => <MsgBox key={num} id={num} activator={chatActivate} />)}
+            {Object.keys(comps).filter((key) => { if (key === "activeNow") { return false }; return true })
+                .map(num => <MsgBox key={num} id={num} activator={chatActivate} />)}
             <div className={s.EndingTextContainer}>
                 <div className={s.EndingText}>
                     <SmallLockIcon />

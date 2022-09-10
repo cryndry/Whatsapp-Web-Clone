@@ -34,12 +34,42 @@
 
 .MessageBody {
     padding: 6px 7px 8px 9px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+}
+
+.MessageTextBody {
+    position: relative;
 }
 
 .MessageText {
     overflow-wrap: break-word;
     white-space: pre-wrap;
     word-break: break-word;
+}
+
+.MessageSpace {
+    width: 56px;
+    height: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Metadata {
+    float: right;
+    margin: -10px 0 -5px 4px;
+    font-size: 0.7rem;
+    color: var(--Secondary);
+    height: 15px;
+    line-height: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.SendingTime {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Ticks {
+    margin-left: 3px;
+    display: inline-block;
 }

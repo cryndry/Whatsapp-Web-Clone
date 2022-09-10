@@ -7,10 +7,14 @@ import ContextButton from "../../assets/ContextButton"
 import { useSelector } from "react-redux"
 
 const MsgBox = (props) => {
-  const isBoxActive = useSelector(state => state.MsgBoxes[props.id])
+  const isBoxActive = useSelector(store => store.MsgBoxes.activeNow === props.id)
+  const boxName = useSelector(store => store.MsgBoxes[props.id].boxName)
+  const lastMessage = useSelector(store => {
+    const messages = store.MsgBoxes[props.id].messages
+    return messages[messages.length - 1]
+  })
   const [isBoxHovered, setIsBoxHovered] = useState(false)
-
-
+  const lastMessageTime = new Date(lastMessage.sendingTime)
   return (
     <div className={isBoxActive ? s.MessageBoxActive : s.MessageBox}
       onClick={(e) => { props.activator(props.id); }}
@@ -24,17 +28,21 @@ const MsgBox = (props) => {
         <div className={s.BoxInfoName}>
           <div className={s.MessageBoxName}>
             <div className={s.MessageBoxNameText}>
-              Ondördüncü harbiye koğuşu
+              {boxName}
             </div>
           </div>
-          <div className={s.BoxLastMsgTime}>18:00</div>
+          <div className={s.BoxLastMsgTime}>
+            {`${lastMessageTime.getHours()}:${lastMessageTime.getMinutes() < 10
+              ? "0" + lastMessageTime.getMinutes()
+              : lastMessageTime.getMinutes()}`}
+          </div>
         </div>
         <div className={s.BoxLastMsg}>
           <div className={isBoxActive ? s.LastMsgBoxActive : s.LastMsgBox}>
-            <span>Taha</span>
+            <span>{lastMessage.sender?.replaceAll(" ","\xA0") || "You"}</span>
             <span>:&nbsp;</span>
             <span className={s.LastMsg}>
-              <span className={s.LastMsgText}>ahahaahahahahahhhah</span>
+              <span className={s.LastMsgText}>{lastMessage.text}</span>
             </span>
             <span className={s.OtherIcons}>
               <MuteIcon />
